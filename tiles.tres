@@ -4,38 +4,70 @@
 [ext_resource type="Texture2D" uid="uid://cju3luw0x70ft" path="res://sprites/stone.jpeg" id="2_stone"]
 [ext_resource type="Texture2D" uid="uid://c6iag8x7rb2i7" path="res://sprites/forest_floor.jpeg" id="3_forest"]
 [ext_resource type="Texture2D" uid="uid://kbysalytp3hn" path="res://sprites/grass_stone_transition.jpeg" id="4_transition"]
+[ext_resource type="Shader" uid="uid://dtt4an1midevp" path="res://terrain.gdshader" id="5_shader"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grass"]
-albedo_texture = ExtResource("1_grass")
-texture_filter = 5
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hxk1b"]
+frequency = 0.05
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p3o2v"]
+noise = SubResource("FastNoiseLite_hxk1b")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_grass"]
+render_priority = 0
+shader = ExtResource("5_shader")
+shader_parameter/albedo_texture = ExtResource("1_grass")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_p3o2v")
+shader_parameter/edge_distance = 0.9
+shader_parameter/noise_scale = 0.1
+shader_parameter/noise_strength = 0.2
+shader_parameter/material_priority = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_grass"]
-material = SubResource("StandardMaterial3D_grass")
-size = Vector2(4, 4)
+material = SubResource("ShaderMaterial_grass")
+size = Vector2(5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stone"]
-albedo_texture = ExtResource("2_stone")
-texture_filter = 5
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_stone"]
+render_priority = 0
+shader = ExtResource("5_shader")
+shader_parameter/albedo_texture = ExtResource("2_stone")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_p3o2v")
+shader_parameter/edge_distance = 0.9
+shader_parameter/noise_scale = 0.1
+shader_parameter/noise_strength = 0.2
+shader_parameter/material_priority = 2.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_stone"]
-material = SubResource("StandardMaterial3D_stone")
-size = Vector2(4, 4)
+material = SubResource("ShaderMaterial_stone")
+size = Vector2(5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_forest"]
-albedo_texture = ExtResource("3_forest")
-texture_filter = 5
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_forest"]
+render_priority = 0
+shader = ExtResource("5_shader")
+shader_parameter/albedo_texture = ExtResource("3_forest")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_p3o2v")
+shader_parameter/edge_distance = 0.9
+shader_parameter/noise_scale = 0.1
+shader_parameter/noise_strength = 0.2
+shader_parameter/material_priority = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_forest"]
-material = SubResource("StandardMaterial3D_forest")
-size = Vector2(4, 4)
+material = SubResource("ShaderMaterial_forest")
+size = Vector2(5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_transition"]
-albedo_texture = ExtResource("4_transition")
-texture_filter = 5
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_transition"]
+render_priority = 0
+shader = ExtResource("5_shader")
+shader_parameter/albedo_texture = ExtResource("4_transition")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_p3o2v")
+shader_parameter/edge_distance = 0.9
+shader_parameter/noise_scale = 0.1
+shader_parameter/noise_strength = 0.2
+shader_parameter/material_priority = 3.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_transition"]
-material = SubResource("StandardMaterial3D_transition")
-size = Vector2(4, 4)
+material = SubResource("ShaderMaterial_transition")
+size = Vector2(5, 5)
 
 [resource]
 item/0/name = "Grass"
