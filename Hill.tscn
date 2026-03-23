@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c81qglbfqblj3"]
+
+[ext_resource type="Texture2D" uid="uid://csttod8u4242j" path="res://sprites/hill.png" id="1_tex"]
+
+[node name="Hill" type="StaticBody3D" unique_id=1571605271]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=53935821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1948204, 0)
+billboard = 1
+shaded = true
+texture = ExtResource("1_tex")

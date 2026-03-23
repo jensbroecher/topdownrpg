@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://sdyefvkb4nn6"]
 
 [ext_resource type="Texture2D" uid="uid://ula6bhwegkpg" path="res://sprites/pine1.png" id="1_tex"]
+[ext_resource type="Shader" path="res://wind.gdshader" id="2_shader"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pine"]
 size = Vector3(2, 2, 2)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wind"]
+render_priority = 0
+shader = ExtResource("2_shader")
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/wind_speed = 1.0
+shader_parameter/wind_strength = 0.1
+shader_parameter/texture_albedo = ExtResource("1_tex")
+
 [node name="PineTree" type="StaticBody3D" unique_id=614860909]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1430923017]
+material_override = SubResource("ShaderMaterial_wind")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6076593, -2.5722141)
 billboard = 1
 shaded = true

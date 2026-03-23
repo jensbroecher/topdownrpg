@@ -1,1 +1,5 @@
 res://Player.gd
+res://Hill.tscn
+res://tiles.tres
+res://wind.gdshader
+res://World.tscn

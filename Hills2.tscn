@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://dv5yeqxthp8aw" path="res://sprites/hills2.png" id="1_tex"]
+
+[node name="Hills2" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+shaded = true
+texture = ExtResource("1_tex")
+flip_h = true
