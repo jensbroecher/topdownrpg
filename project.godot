@@ -20,4 +20,5 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [rendering]
 
+renderer/rendering_method="mobile"
 lights_and_shadows/directional_shadow/size=8192

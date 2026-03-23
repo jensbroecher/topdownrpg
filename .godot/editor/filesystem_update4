@@ -1,9 +1,7 @@
-res://DynamicSprite.gd
-res://House.tscn
-res://tiles.tres
-res://Player.gd
 res://World.tscn
 res://addons/GodotWeatherSystem/shaders/weather_system_sky.gdshader
+res://tiles.tres
 res://addons/GodotWeatherSystem/seasons/summer.tres
 res://addons/GodotWeatherSystem/seasons/winter.tres
-res://addons/GodotWeatherSystem/scripts/WeatherController.gd
+res://House.tscn
+res://Well.tscn

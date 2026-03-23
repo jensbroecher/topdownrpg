@@ -40,12 +40,12 @@ colors = PackedColorArray(0.8, 0.8, 0.8, 0, 0.8, 0.8, 0.8, 0.5, 0.8, 0.8, 0.8, 0
 [node name="House" type="StaticBody3D" unique_id=970096248]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=637824500]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 4.5622635, -1)
+transform = Transform3D(0.9996112, -0.027886746, 0, 0.027886748, 0.9996111, 0, 0, 0, 0.9999999, 0, 4.4028597, -1)
 shaded = true
 alpha_cut = 1
 texture = ExtResource("1_tex")
 script = ExtResource("2_tilter")
-tilt_strength = -0.5
+tilt_strength = 2.0
 max_tilt_deg = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=716618367]
