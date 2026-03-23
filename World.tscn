@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdhwx8bvxbdhx"]
 
 [ext_resource type="PackedScene" uid="uid://c7t8t7x5b1p4k" path="res://Player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://cpx88edmwbon1" path="res://addons/GodotWeatherSystem/scripts/SeasonResource.gd" id="2_b2ar6"]
 [ext_resource type="PackedScene" uid="uid://sdyefvkb4nn6" path="res://PineTree.tscn" id="2_pine"]
 [ext_resource type="PackedScene" path="res://PineTree2.tscn" id="4_pine2"]
 [ext_resource type="PackedScene" path="res://PineTree3.tscn" id="5_pine3"]
@@ -9,6 +10,9 @@
 [ext_resource type="MeshLibrary" uid="uid://2yuentd6pfuf" path="res://tiles.tres" id="8_tiles"]
 [ext_resource type="PackedScene" uid="uid://c81qglbfqblj3" path="res://Hill.tscn" id="9_hill"]
 [ext_resource type="PackedScene" path="res://Hills2.tscn" id="10_hills2"]
+[ext_resource type="PackedScene" uid="uid://da2i62hjyc1cp" path="res://addons/GodotWeatherSystem/weather_controller.tscn" id="11_weather"]
+[ext_resource type="Resource" uid="uid://bs7bbxwm67f58" path="res://addons/GodotWeatherSystem/seasons/summer.tres" id="12_summer"]
+[ext_resource type="Resource" uid="uid://d2qid4rjqnonm" path="res://addons/GodotWeatherSystem/seasons/winter.tres" id="13_winter"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
 albedo_color = Color(0.121569, 0.380392, 0.160784, 1)
@@ -22,12 +26,10 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 
 [node name="World" type="Node3D" unique_id=406988709]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1177207163]
-transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707106, -0.5, 0.5, 0, 10, 0)
-shadow_enabled = true
-shadow_bias = 0.03
-directional_shadow_blend_splits = true
-directional_shadow_max_distance = 60.0
+[node name="WeatherController" parent="." unique_id=517290660 instance=ExtResource("11_weather")]
+seasons = Array[ExtResource("2_b2ar6")]([ExtResource("12_summer"), ExtResource("13_winter")])
+startSeason = 1
+startWeather = 1
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=432381400]
 
@@ -39,7 +41,7 @@ shape = SubResource("ConcavePolygonShape3D_floor")
 
 [node name="Player" parent="." unique_id=1516801305 instance=ExtResource("1_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-camera_offset = Vector3(0, 9, 15)
+camera_offset = Vector3(0, 10, 15)
 camera_pitch = -15.0
 
 [node name="PineTree" parent="." unique_id=1167087980 instance=ExtResource("2_pine")]
@@ -55,10 +57,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.474309, 0, -8)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6409254, 0, -8.518183)
 
 [node name="House" parent="." unique_id=1069109850 instance=ExtResource("6_house")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1.0027828)
 
 [node name="Well" parent="." unique_id=919868062 instance=ExtResource("7_well")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.312556, 0.667655, 1.1328135)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.122039, 0.667655, 3.3732557)
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1267533214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
@@ -69,7 +71,10 @@ data = {
 }
 
 [node name="Hill" parent="." unique_id=2126380576 instance=ExtResource("9_hill")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0, 0, -50)
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0, 0, -82.86667)
 
 [node name="Hills2" parent="." unique_id=1190942170 instance=ExtResource("10_hills2")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 78.65534, 13.757273, -50)
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 78.65534, 13.757273, -80.787125)
+
+[node name="Hills3" parent="." unique_id=556287517 instance=ExtResource("10_hills2")]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, -78.65265, 16.851744, -80.36715)

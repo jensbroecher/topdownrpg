@@ -1,5 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774227328
+::res://::1774271641
+DynamicSprite.gd::GDScript::6534455929816646752::1774267484::0::1::::<>Sprite3D<><>0<>0<><>::
+elf running.fbx::PackedScene::3476892686832970338::1774264808::1774264859::1::::<><><>0<>0<>7187e9783d5f78b75d7a502e96b19d91<>res://.godot/imported/elf running.fbx-994811cd52b16ea22e2ddd46ec0092f3.scn::uid://crbr2u8r27nvp::::res://elf running_0.png<>uid://ok5euis1tvnb::::res://elf running_1.png
+elf running_0.png::CompressedTexture2D::5969197594554579869::1774264822::1774264861::1::::<><><>0<>0<>2a063ca6db64bfe368a640a3bbf54eae<>res://.godot/imported/elf running_0.png-afe7b22136600ea06d53bebe303587df.s3tc.ctex::
+elf running_1.png::CompressedTexture2D::1005117305110456711::1774264836::1774264862::1::::<><><>0<>0<>135712a28320e3eefe6aa75e93212583<>res://.godot/imported/elf running_1.png-e5d91b83467c6b79e2d614325818f4ef.s3tc.ctex::
+elf running_2.png::CompressedTexture2D::4329642926153314841::1774264847::1774264851::1::::<><><>0<>0<>f8095c58fbde7a8ca73a3c35dfec67ca<>res://.godot/imported/elf running_2.png-b70e3009e93e35b946fbf610c7f448c5.ctex::
+elf running_3.png::CompressedTexture2D::8625786508509065231::1774264853::1774264858::1::::<><><>0<>0<>ba36d3c2295f12a41d62b4d98c19fd74<>res://.godot/imported/elf running_3.png-ab7990dbcc2a23ae33b88d463f59ab7f.ctex::
 elf.glb::PackedScene::8370034410816879703::1774223524::1774223578::1::::<><><>0<>0<>ea05009a61cce0f30d427b63971b9e30<>res://.godot/imported/elf.glb-f7a97557a100b8f9de63ac0928e47679.scn::uid://44ayp1smwwci::::res://elf_texture_pbr_20250901.png<>uid://cw52h2tfr1qjl::::res://elf_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png<>uid://cacceuq5q84is::::res://elf_texture_pbr_20250901_normal.png
 elf_0.png::CompressedTexture2D::6943286258206545352::1774223599::1774223662::1::::<><><>0<>0<>af0c6f51eeee764236361824dd5e6fc9<>res://.godot/imported/elf_0.png-c4fafd459ab6a0b9734c90020ebb24b5.s3tc.ctex::
 elf_1.png::CompressedTexture2D::457603112428919012::1774223636::1774223663::1::::<><><>0<>0<>08e6a9b3429564a8e6717788fda0af38<>res://.godot/imported/elf_1.png-c50c95d7d711bbf05b00e7f4220faa4c.s3tc.ctex::
@@ -9,25 +15,57 @@ elf_texture_pbr_20250901.png::CompressedTexture2D::2095387108274320980::17742235
 elf_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png::CompressedTexture2D::6380580567139409981::1774223565::1774223663::1::::<><><>0<>0<>eb69bde619c2ed6df6c01c8fabf4522e<>res://.godot/imported/elf_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png-763827ece00cb43185df7f2b6047265e.s3tc.ctex::
 elf_texture_pbr_20250901_normal.png::CompressedTexture2D::4777099776625122654::1774223547::1774223663::1::::<><><>0<>0<>ae9d9eb333c52e5ac7a5a00ef0c0846d<>res://.godot/imported/elf_texture_pbr_20250901_normal.png-272f996e076ecbfe5d867f86d7be5f80.s3tc.ctex::
 Hill.tscn::PackedScene::7143729795244784610::1774226732::0::1::::<><><>0<>0<><>::uid://csttod8u4242j::::res://sprites/hill.png
-Hills2.tscn::PackedScene::-1::1774227328::0::1::::<><><>0<>0<><>::
-House.tscn::PackedScene::9101114206068084700::1774222869::0::1::::<><><>0<>0<><>::uid://cl23hxvnrrc16::::res://sprites/house.png
+Hills2.tscn::PackedScene::-1::1774227474::0::1::::<><><>0<>0<><>::uid://dv5yeqxthp8aw::::res://sprites/hills2.png
+House.tscn::PackedScene::9101114206068084700::1774269112::0::1::::<><><>0<>0<><>::uid://cl23hxvnrrc16::::res://sprites/house.png<>uid://c0dlsf3y8xhwq::::res://DynamicSprite.gd
 PineTree2.tscn::PackedScene::-1::1774225468::0::1::::<><><>0<>0<><>::
 PineTree3.tscn::PackedScene::-1::1774225470::0::1::::<><><>0<>0<><>::
 PineTree.tscn::PackedScene::1271056965263266309::1774225817::0::1::::<><><>0<>0<><>::uid://ula6bhwegkpg::::res://sprites/pine1.png
-Player.gd::GDScript::6997983308176928574::1774224441::0::1::::<>CharacterBody3D<><>0<>1<><>::
-Player.tscn::PackedScene::7060146849619005952::1774224308::0::1::::<><><>0<>0<><>::uid://c6x406v5cang5::::res://Player.gd<>uid://b8alr48adkblq::::res://sprites/elf.png
-tiles.tres::MeshLibrary::1945866039688422345::1774226732::0::1::::<><><>0<>0<><>::uid://c57qnu5hna8y1::::res://sprites/grass.jpeg<>uid://cju3luw0x70ft::::res://sprites/stone.jpeg
-Well.tscn::PackedScene::4200432657926572498::1774223014::0::1::::<><><>0<>0<><>::uid://vw8vm5yomtgl::::res://sprites/well.png
+Player.gd::GDScript::6997983308176928574::1774270770::0::1::::<>CharacterBody3D<><>0<>1<><>::
+Player.tscn::PackedScene::7060146849619005952::1774265960::0::1::::<><><>0<>0<><>::uid://c6x406v5cang5::::res://Player.gd<>uid://bpsh6dilfx0py::::res://elf running.fbx
+tiles.tres::MeshLibrary::1945866039688422345::1774271641::0::1::::<><><>0<>0<><>::uid://c57qnu5hna8y1::::res://sprites/grass.jpeg<>uid://cju3luw0x70ft::::res://sprites/stone.jpeg
+Well.tscn::PackedScene::4200432657926572498::1774267100::0::1::::<><><>0<>0<><>::uid://vw8vm5yomtgl::::res://sprites/well.png<>res://DynamicSprite.gd
 wind.gdshader::Shader::1183657936892312159::1774226877::0::1::::<><><>0<>0<><>::
-World.tscn::PackedScene::2612816441786573289::1774227345::0::1::::<><><>0<>0<><>::uid://c7t8t7x5b1p4k::::res://Player.tscn<>uid://sdyefvkb4nn6::::res://PineTree.tscn<>res://PineTree2.tscn<>res://PineTree3.tscn<>uid://d2wwayuti7onk::::res://House.tscn<>uid://b03yroc6p4n0u::::res://Well.tscn<>uid://2yuentd6pfuf::::res://tiles.tres
-::res://sprites/::1774227291
+World.tscn::PackedScene::2612816441786573289::1774271641::0::1::::<><><>0<>0<><>::uid://c7t8t7x5b1p4k::::res://Player.tscn<>uid://cpx88edmwbon1::::res://addons/GodotWeatherSystem/scripts/SeasonResource.gd<>uid://sdyefvkb4nn6::::res://PineTree.tscn<>res://PineTree2.tscn<>res://PineTree3.tscn<>uid://d2wwayuti7onk::::res://House.tscn<>uid://b03yroc6p4n0u::::res://Well.tscn<>uid://2yuentd6pfuf::::res://tiles.tres<>uid://c81qglbfqblj3::::res://Hill.tscn<>res://Hills2.tscn<>uid://da2i62hjyc1cp::::res://addons/GodotWeatherSystem/weather_controller.tscn<>uid://bs7bbxwm67f58::::res://addons/GodotWeatherSystem/seasons/summer.tres<>uid://d2qid4rjqnonm::::res://addons/GodotWeatherSystem/seasons/winter.tres
+::res://addons/::1773062573
+::res://addons/GodotWeatherSystem/::1773062870
+weather_controller.tscn::PackedScene::7215542775377285035::1773074720::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/scripts/WeatherController.gd<>uid://bs7bbxwm67f58::::res://addons/GodotWeatherSystem/seasons/summer.tres<>res://addons/GodotWeatherSystem/shaders/weather_system_sky.gdshader
+::res://addons/GodotWeatherSystem/nodes/::1773062573
+world_environment.tscn::PackedScene::2345536640681366616::1773062573::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/shaders/weather_system_sky.gdshader
+::res://addons/GodotWeatherSystem/particles/::1773062573
+rain_particles.tscn::PackedScene::1909876462536026149::1773062573::0::1::::<><><>0<>0<><>::
+snow_particles.tscn::PackedScene::8136327371777720348::1773062573::0::1::::<><><>0<>0<><>::
+::res://addons/GodotWeatherSystem/precipitation/::1773062573
+heavy_rain.tres::Resource/PrecipitationResource::6582523420805676345::1773070085::0::1::::<><><>0<>0<><>::uid://2hfnetgvt1n2::::res://addons/GodotWeatherSystem/particles/rain_particles.tscn<>res://addons/GodotWeatherSystem/scripts/PrecipitationResource.gd
+heavy_snow.tres::Resource/PrecipitationResource::8470683878371145464::1773070107::0::1::::<><><>0<>0<><>::uid://dn6kegjtnwhc3::::res://addons/GodotWeatherSystem/particles/snow_particles.tscn<>res://addons/GodotWeatherSystem/scripts/PrecipitationResource.gd
+rain.tres::Resource/PrecipitationResource::2852098357319722343::1773070049::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/scripts/PrecipitationResource.gd<>uid://2hfnetgvt1n2::::res://addons/GodotWeatherSystem/particles/rain_particles.tscn
+snow.tres::Resource/PrecipitationResource::6616461527998446157::1773070105::0::1::::<><><>0<>0<><>::uid://dn6kegjtnwhc3::::res://addons/GodotWeatherSystem/particles/snow_particles.tscn<>res://addons/GodotWeatherSystem/scripts/PrecipitationResource.gd
+::res://addons/GodotWeatherSystem/scripts/::1774271230
+PrecipitationResource.gd::GDScript::2891470877358153719::1773069824::0::1::::PrecipitationResource<>Resource<><>0<>0<><>::
+SeasonResource.gd::GDScript::5875217517562711860::1773069838::0::1::::SeasonResource<>Resource<><>0<>0<><>::
+SkyColourResource.gd::GDScript::6175679268112123505::1773069821::0::1::::SkyColourResource<>Resource<><>0<>0<><>::
+WeatherController.gd::GDScript::2514266270100075593::1774271230::0::1::::WeatherController<>Node<><>0<>0<><>::
+WeatherOccurrenceResource.gd::GDScript::6530893941669850056::1773069828::0::1::::WeatherOccurrenceResource<>Resource<><>0<>0<><>::
+WeatherResource.gd::GDScript::1397354688086009690::1773069826::0::1::::WeatherResource<>Resource<><>0<>0<><>::
+::res://addons/GodotWeatherSystem/seasons/::1774269709
+summer.tres::Resource/SeasonResource::3715943702704934689::1774269709::0::1::::<><><>0<>0<><>::uid://cpx88edmwbon1::::res://addons/GodotWeatherSystem/scripts/SeasonResource.gd<>uid://ct8ssg1fuina4::::res://addons/GodotWeatherSystem/scripts/SkyColourResource.gd<>uid://c0bu4su5psbae::::res://addons/GodotWeatherSystem/scripts/WeatherOccurrenceResource.gd<>uid://ds2x8q6qhj8b0::::res://addons/GodotWeatherSystem/weather/fine.tres<>uid://bbtqdfvkjixub::::res://addons/GodotWeatherSystem/weather/clouded.tres<>uid://ba3b5cyqnspgi::::res://addons/GodotWeatherSystem/weather/rain.tres<>uid://e1leud4f82rx::::res://addons/GodotWeatherSystem/weather/heavy_rain.tres
+winter.tres::Resource/SeasonResource::9087883516564637382::1774269709::0::1::::<><><>0<>0<><>::uid://cpx88edmwbon1::::res://addons/GodotWeatherSystem/scripts/SeasonResource.gd<>uid://ct8ssg1fuina4::::res://addons/GodotWeatherSystem/scripts/SkyColourResource.gd<>uid://c0bu4su5psbae::::res://addons/GodotWeatherSystem/scripts/WeatherOccurrenceResource.gd<>uid://ds2x8q6qhj8b0::::res://addons/GodotWeatherSystem/weather/fine.tres<>uid://bbtqdfvkjixub::::res://addons/GodotWeatherSystem/weather/clouded.tres<>uid://cbxe14bclsqib::::res://addons/GodotWeatherSystem/weather/snow.tres<>uid://d076aaeqt2uoh::::res://addons/GodotWeatherSystem/weather/heavy_snow.tres
+::res://addons/GodotWeatherSystem/shaders/::1774269709
+weather_system_sky.gdshader::Shader::3572337618670067802::1774269709::0::1::::<><><>0<>0<><>::
+::res://addons/GodotWeatherSystem/weather/::1773062573
+clouded.tres::Resource/WeatherResource::2496809829448613717::1773070060::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/scripts/WeatherResource.gd
+fine.tres::Resource/WeatherResource::8479855746955242551::1773070051::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/scripts/WeatherResource.gd
+heavy_rain.tres::Resource/WeatherResource::335105282680788349::1773070062::0::1::::<><><>0<>0<><>::uid://c01vg1cmhhp0d::::res://addons/GodotWeatherSystem/precipitation/heavy_rain.tres<>res://addons/GodotWeatherSystem/scripts/WeatherResource.gd
+heavy_snow.tres::Resource/WeatherResource::8981925463868445627::1773070103::0::1::::<><><>0<>0<><>::uid://dsxi6qll8jgv5::::res://addons/GodotWeatherSystem/precipitation/heavy_snow.tres<>res://addons/GodotWeatherSystem/scripts/WeatherResource.gd
+rain.tres::Resource/WeatherResource::2444337694483758576::1773070099::0::1::::<><><>0<>0<><>::res://addons/GodotWeatherSystem/scripts/WeatherResource.gd<>uid://bgvtv4uh26n6n::::res://addons/GodotWeatherSystem/precipitation/rain.tres
+snow.tres::Resource/WeatherResource::4890801722808457873::1773070101::0::1::::<><><>0<>0<><>::uid://c1jcfi25qvosj::::res://addons/GodotWeatherSystem/precipitation/snow.tres<>res://addons/GodotWeatherSystem/scripts/WeatherResource.gd
+::res://sprites/::1774271688
 elf.png::CompressedTexture2D::4703352343325087562::1774222500::1774222620::1::::<><><>0<>0<>6d5fbe2db319296ce00448687fc09ffe<>res://.godot/imported/elf.png-949dbbbe22e28e225e9bf7b71bee8a6a.s3tc.ctex::
-grass.jpeg::CompressedTexture2D::6945562549008708222::1774220276::1774220421::1::::<><><>0<>0<>1112afa050fdda25a250976f8acc8ca3<>res://.godot/imported/grass.jpeg-c16a70cd5c6b4cdced2d761853332b84.s3tc.ctex::
+grass.jpeg::CompressedTexture2D::6945562549008708222::1774271688::1774271791::1::::<><><>0<>0<>1112afa050fdda25a250976f8acc8ca3<>res://.godot/imported/grass.jpeg-c16a70cd5c6b4cdced2d761853332b84.s3tc.ctex::
 hill.png::CompressedTexture2D::6076642563672306171::1774226719::1774226724::1::::<><><>0<>0<>e7f53b6fe7d39b8224406c3ef06c1e1b<>res://.godot/imported/hill.png-86f3c93e7c41d5a75f60c5564f27caf6.s3tc.ctex::
 hills2.png::CompressedTexture2D::8696624327879150242::1774227285::1774227374::1::::<><><>0<>0<>ca4ff83e4c2f08cef900cfa46477659e<>res://.godot/imported/hills2.png-07d7ea5fe716d05b04cb88cad9293acd.s3tc.ctex::
 house.png::CompressedTexture2D::5602370664210963219::1774214850::1774214942::1::::<><><>0<>0<>cfa8dd63ede57e6ddf0731c03eb95b8b<>res://.godot/imported/house.png-692a11096cd356792c6bc12472b23812.s3tc.ctex::
 pine1.png::CompressedTexture2D::1426540452008510620::1774212361::1774212367::1::::<><><>0<>0<>83beebfbd48a14a3349e7bcec45bc002<>res://.godot/imported/pine1.png-2b3c4a8d6e910159f401a324a67978aa.s3tc.ctex::
 pine2.png::CompressedTexture2D::4924528598504706009::1774214258::1774214431::1::::<><><>0<>0<>0f3873e0885104a79f138eb2b516d9fa<>res://.godot/imported/pine2.png-9db50a8ae59bf630b0cd5bf4f576d58b.s3tc.ctex::
 pine3.png::CompressedTexture2D::210815436730311660::1774214321::1774214431::1::::<><><>0<>0<>768a99b429bab204f91d3c3db281d857<>res://.godot/imported/pine3.png-171ceb662beba76063863c970af6cbd5.s3tc.ctex::
-stone.jpeg::CompressedTexture2D::5447549320360712113::1774220295::1774220421::1::::<><><>0<>0<>bde46864ea43f4786f4f26f0b869a541<>res://.godot/imported/stone.jpeg-54fd0f559fe6135d194f0ad71e4db2db.s3tc.ctex::
+stone.jpeg::CompressedTexture2D::5447549320360712113::1774271688::1774271791::1::::<><><>0<>0<>bde46864ea43f4786f4f26f0b869a541<>res://.godot/imported/stone.jpeg-54fd0f559fe6135d194f0ad71e4db2db.s3tc.ctex::
 well.png::CompressedTexture2D::1521423867155278179::1774217926::1774219110::1::::<><><>0<>0<>24140c2825ddd0fb845afbb8decef19c<>res://.godot/imported/well.png-1eaa4584daaa2d81fc1dd729eb6692d4.s3tc.ctex::

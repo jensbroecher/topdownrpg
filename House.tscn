@@ -1,53 +1,70 @@
 [gd_scene format=3 uid="uid://d2wwayuti7onk"]
 
 [ext_resource type="Texture2D" uid="uid://cl23hxvnrrc16" path="res://sprites/house.png" id="1_tex"]
+[ext_resource type="Script" uid="uid://c0dlsf3y8xhwq" path="res://DynamicSprite.gd" id="2_tilter"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_house"]
 size = Vector3(6, 4, 4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smoke"]
-transparency = 1
-shading_mode = 0
-vertex_color_use_as_albedo = true
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
+[sub_resource type="Shader" id="Shader_smoke"]
+code = "shader_type spatial;
+render_mode unshaded, blend_mix, depth_draw_never, cull_disabled;
 
-[sub_resource type="SphereMesh" id="SphereMesh_smoke"]
-material = SubResource("StandardMaterial3D_smoke")
-radius = 0.3
-height = 0.6
+void vertex() {
+	MODELVIEW_MATRIX = VIEW_MATRIX * mat4(vec4(INV_VIEW_MATRIX[0].xyz, 0.0), vec4(INV_VIEW_MATRIX[1].xyz, 0.0), vec4(INV_VIEW_MATRIX[2].xyz, 0.0), MODEL_MATRIX[3]);
+	MODELVIEW_MATRIX = MODELVIEW_MATRIX * mat4(vec4(length(MODEL_MATRIX[0].xyz), 0.0, 0.0, 0.0), vec4(0.0, length(MODEL_MATRIX[1].xyz), 0.0, 0.0), vec4(0.0, 0.0, length(MODEL_MATRIX[2].xyz), 0.0), vec4(0.0, 0.0, 0.0, 1.0));
+}
+
+void fragment() {
+	float dist = distance(UV, vec2(0.5));
+	float mask = smoothstep(0.5, 0.1, dist);
+	ALBEDO = COLOR.rgb;
+	ALPHA = mask * COLOR.a;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smoke"]
+render_priority = 0
+shader = SubResource("Shader_smoke")
+
+[sub_resource type="QuadMesh" id="QuadMesh_smoke"]
+material = SubResource("ShaderMaterial_smoke")
+
+[sub_resource type="Curve" id="Curve_smoke_scale"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_smoke"]
-colors = PackedColorArray(0.8, 0.8, 0.8, 0.6, 0.8, 0.8, 0.8, 0)
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(0.8, 0.8, 0.8, 0, 0.8, 0.8, 0.8, 0.5, 0.8, 0.8, 0.8, 0.5, 0.8, 0.8, 0.8, 0)
 
 [node name="House" type="StaticBody3D" unique_id=970096248]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=637824500]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 4.5622635, -1)
-billboard = 1
 shaded = true
 alpha_cut = 1
 texture = ExtResource("1_tex")
+script = ExtResource("2_tilter")
+tilt_strength = -0.5
+max_tilt_deg = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=716618367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_house")
 
 [node name="SmokeParticles" type="CPUParticles3D" parent="." unique_id=1822714149]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0508957, 8.235085, -2.4499664)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8799763, 9.431094, -1.2172573)
 cast_shadow = 0
-amount = 32
+amount = 64
 lifetime = 4.0
-mesh = SubResource("SphereMesh_smoke")
+mesh = SubResource("QuadMesh_smoke")
 emission_shape = 1
 emission_sphere_radius = 0.2
 direction = Vector3(0, 1, 0)
 spread = 2.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_min = 2.0
-initial_velocity_max = 3.0
-scale_amount_min = 0.5
-scale_amount_max = 2.0
+gravity = Vector3(0, 1, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_smoke_scale")
 color_ramp = SubResource("Gradient_smoke")

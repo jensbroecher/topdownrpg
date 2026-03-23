@@ -1,5 +1,9 @@
-res://Player.gd
-res://Hill.tscn
+res://DynamicSprite.gd
+res://House.tscn
 res://tiles.tres
-res://wind.gdshader
+res://Player.gd
 res://World.tscn
+res://addons/GodotWeatherSystem/shaders/weather_system_sky.gdshader
+res://addons/GodotWeatherSystem/seasons/summer.tres
+res://addons/GodotWeatherSystem/seasons/winter.tres
+res://addons/GodotWeatherSystem/scripts/WeatherController.gd

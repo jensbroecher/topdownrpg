@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7t8t7x5b1p4k"]
 
 [ext_resource type="Script" uid="uid://c6x406v5cang5" path="res://Player.gd" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://dririj6axltpf" path="res://elf.glb" id="2_elf"]
+[ext_resource type="PackedScene" uid="uid://bpsh6dilfx0py" path="res://elf running.fbx" id="2_elf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 
@@ -13,7 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_player")
 
 [node name="Elf" parent="." unique_id=156413552 instance=ExtResource("2_elf")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+transform = Transform3D(2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, 0, 0, 0)
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1362321813]
 
