@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bdhwx8bvxbdhx"]
+
+[ext_resource type="PackedScene" uid="uid://c7t8t7x5b1p4k" path="res://Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://sdyefvkb4nn6" path="res://PineTree.tscn" id="2_pine"]
+[ext_resource type="PackedScene" path="res://PineTree2.tscn" id="4_pine2"]
+[ext_resource type="PackedScene" path="res://PineTree3.tscn" id="5_pine3"]
+[ext_resource type="PackedScene" uid="uid://d2wwayuti7onk" path="res://House.tscn" id="6_house"]
+[ext_resource type="PackedScene" uid="uid://b03yroc6p4n0u" path="res://Well.tscn" id="7_well"]
+[ext_resource type="MeshLibrary" uid="uid://2yuentd6pfuf" path="res://tiles.tres" id="8_tiles"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.121569, 0.380392, 0.160784, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("StandardMaterial3D_floor")
+size = Vector2(100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_floor"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+
+[node name="World" type="Node3D" unique_id=406988709]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1177207163]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707106, -0.5, 0.5, 0, 10, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 60.0
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=432381400]
+
+[node name="MeshInstance" type="MeshInstance3D" parent="Floor" unique_id=2012324414]
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="Floor" unique_id=130917163]
+shape = SubResource("ConcavePolygonShape3D_floor")
+
+[node name="Player" parent="." unique_id=1516801305 instance=ExtResource("1_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+camera_offset = Vector3(0, 9, 15)
+camera_pitch = -15.0
+
+[node name="PineTree" parent="." unique_id=1167087980 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5)
+
+[node name="PineTree2" parent="." unique_id=782276859 instance=ExtResource("4_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0402, 0, -11.513837)
+
+[node name="PineTree3" parent="." unique_id=1238819554 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.474309, 0, -8)
+
+[node name="PineTree4" parent="." unique_id=614860909 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6409254, 0, -8.518183)
+
+[node name="House" parent="." unique_id=1069109850 instance=ExtResource("6_house")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 6)
+
+[node name="Well" parent="." unique_id=919868062 instance=ExtResource("7_well")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.312556, 0.667655, 1.1328135)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1267533214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+mesh_library = ExtResource("8_tiles")
+cell_size = Vector3(4, 0.1, 4)
+data = {
+"cells": PackedInt32Array(65533, 2, 1, 65532, 2, 1, 65532, 3, 1, 65533, 3, 1, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 65535, 1, 0, 65535, 0, 0, 65535, 65535, 0, 0, 65535, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 65535, 65534, 0, 65535, 65533, 0, 65535, 65532, 0, 65535, 65531, 0, 65535, 65530, 0, 0, 65530, 0, 1, 65531, 0, 1, 65532, 0, 1, 65533, 0, 0, 65533, 0, 0, 65534, 0, 65534, 65535, 0, 65534, 65534, 0, 65534, 65533, 0, 0, 65532, 0, 2, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 2, 1, 0, 2, 2, 0, 1, 2, 0, 1, 65535, 0, 2, 65535, 0, 2, 0, 0, 2, 65534, 0, 3, 65533, 0, 1, 3, 0, 65531, 2, 0, 65531, 3, 0, 65530, 3, 0, 65530, 2, 0, 65530, 1, 0, 65530, 0, 0, 65529, 0, 0, 65529, 65535, 0, 65530, 65535, 0, 65531, 1, 0, 65529, 1, 0, 65531, 65535, 0, 65532, 1, 1, 65533, 1, 1, 65534, 1, 0)
+}

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7t8t7x5b1p4k"]
+
+[ext_resource type="Script" uid="uid://c6x406v5cang5" path="res://Player.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dririj6axltpf" path="res://elf.glb" id="2_elf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+
+[node name="Player" type="CharacterBody3D" unique_id=487565928]
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=587660531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="Elf" parent="." unique_id=156413552 instance=ExtResource("2_elf")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1362321813]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=490731847]
+transform = Transform3D(1, 0, 0, 0, 0.86602503, 0.4999998, 0, -0.4999998, 0.86602503, 0, 8, 14)

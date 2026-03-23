@@ -1,0 +1,36 @@
+[gd_resource type="MeshLibrary" format=3 uid="uid://2yuentd6pfuf"]
+
+[ext_resource type="Texture2D" uid="uid://c57qnu5hna8y1" path="res://sprites/grass.jpeg" id="1_grass"]
+[ext_resource type="Texture2D" uid="uid://cju3luw0x70ft" path="res://sprites/stone.jpeg" id="2_stone"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grass"]
+albedo_texture = ExtResource("1_grass")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_grass"]
+material = SubResource("StandardMaterial3D_grass")
+size = Vector2(4, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stone"]
+albedo_texture = ExtResource("2_stone")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_stone"]
+material = SubResource("StandardMaterial3D_stone")
+size = Vector2(4, 4)
+
+[resource]
+item/0/name = "Grass"
+item/0/mesh = SubResource("PlaneMesh_grass")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+item/1/name = "Stone"
+item/1/mesh = SubResource("PlaneMesh_stone")
+item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/mesh_cast_shadow = 1
+item/1/shapes = []
+item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/navigation_layers = 1

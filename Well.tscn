@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b03yroc6p4n0u"]
+
+[ext_resource type="Texture2D" uid="uid://vw8vm5yomtgl" path="res://sprites/well.png" id="1_tex"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_well"]
+height = 1.5
+radius = 1.0
+
+[node name="Well" type="StaticBody3D" unique_id=1577141632]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1598391913]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 2.033187, -0.5)
+billboard = 1
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource("1_tex")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1500087259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CylinderShape3D_well")
