@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv5yeqxthp8aw"
-path.s3tc="res://.godot/imported/hills2.png-07d7ea5fe716d05b04cb88cad9293acd.s3tc.ctex"
+uid="uid://dya1egnbv27f4"
+path.s3tc="res://.godot/imported/fence.png-24ed3f51ca1697467c6969f2bdfb1048.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/hills2.png"
-dest_files=["res://.godot/imported/hills2.png-07d7ea5fe716d05b04cb88cad9293acd.s3tc.ctex"]
+source_file="res://sprites/fence.png"
+dest_files=["res://.godot/imported/fence.png-24ed3f51ca1697467c6969f2bdfb1048.s3tc.ctex"]
 
 [params]
 

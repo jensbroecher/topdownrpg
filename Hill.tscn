@@ -4,8 +4,8 @@
 
 [node name="Hill" type="StaticBody3D" unique_id=1571605271]
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=53935821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1948204, 0)
-billboard = 1
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1871052632]
+transform = Transform3D(1, 0, 0, 0, 0.9689597, 0.24721885, 0, -0.24721885, 0.9689597, 0, 3.1948204, 0)
+centered = false
 shaded = true
 texture = ExtResource("1_tex")

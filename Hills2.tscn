@@ -1,6 +1,10 @@
-[gd_scene format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Texture2D" uid="uid://dv5yeqxthp8aw" path="res://sprites/hills2.png" id="1_tex"]
+[ext_resource type="PackedScene" uid="uid://sdyefvkb4nn6" path="res://PineTree.tscn" id="2_pine"]
+[ext_resource type="PackedScene" path="res://PineTree2.tscn" id="3_pine2"]
+[ext_resource type="PackedScene" path="res://PineTree3.tscn" id="4_pine3"]
+[ext_resource type="PackedScene" path="res://Fence.tscn" id="5_fence"]
 
 [node name="Hills2" type="StaticBody3D"]
 
@@ -9,3 +13,24 @@ billboard = 1
 shaded = true
 texture = ExtResource("1_tex")
 flip_h = true
+
+[node name="PineTree" parent="." instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -5)
+
+[node name="PineTree2" parent="." instance=ExtResource("3_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -5)
+
+[node name="PineTree3" parent="." instance=ExtResource("4_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Fence" parent="." instance=ExtResource("5_fence")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Fence2" parent="." instance=ExtResource("5_fence")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -5)
+
+[node name="Fence3" parent="." instance=ExtResource("5_fence")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -5)

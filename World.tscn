@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdhwx8bvxbdhx"]
 
 [ext_resource type="PackedScene" uid="uid://c7t8t7x5b1p4k" path="res://Player.tscn" id="1_player"]
-[ext_resource type="Script" uid="uid://cpx88edmwbon1" path="res://addons/GodotWeatherSystem/scripts/SeasonResource.gd" id="2_b2ar6"]
+[ext_resource type="Script" uid="uid://be1ldgggjvmql" path="res://addons/GodotWeatherSystem/scripts/SeasonResource.gd" id="2_b2ar6"]
 [ext_resource type="PackedScene" uid="uid://sdyefvkb4nn6" path="res://PineTree.tscn" id="2_pine"]
 [ext_resource type="PackedScene" path="res://PineTree2.tscn" id="4_pine2"]
 [ext_resource type="PackedScene" path="res://PineTree3.tscn" id="5_pine3"]
@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://b03yroc6p4n0u" path="res://Well.tscn" id="7_well"]
 [ext_resource type="MeshLibrary" uid="uid://2yuentd6pfuf" path="res://tiles.tres" id="8_tiles"]
 [ext_resource type="PackedScene" uid="uid://c81qglbfqblj3" path="res://Hill.tscn" id="9_hill"]
-[ext_resource type="PackedScene" path="res://Hills2.tscn" id="10_hills2"]
 [ext_resource type="PackedScene" uid="uid://da2i62hjyc1cp" path="res://addons/GodotWeatherSystem/weather_controller.tscn" id="11_weather"]
 [ext_resource type="Resource" uid="uid://bs7bbxwm67f58" path="res://addons/GodotWeatherSystem/seasons/summer.tres" id="12_summer"]
 [ext_resource type="Resource" uid="uid://d2qid4rjqnonm" path="res://addons/GodotWeatherSystem/seasons/winter.tres" id="13_winter"]
+[ext_resource type="PackedScene" path="res://Fence.tscn" id="14_fence"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
 albedo_color = Color(0.121569, 0.380392, 0.160784, 1)
@@ -42,7 +42,7 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_floor")
 
 [node name="Player" parent="." unique_id=1516801305 instance=ExtResource("1_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.102938, 1, 9.158046)
 camera_offset = Vector3(0, 5, 10)
 camera_pitch = -15.0
 
@@ -100,8 +100,113 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.069736, 0.6480751, -13.27
 [node name="PineTree13" parent="." unique_id=768733933 instance=ExtResource("2_pine")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.811195, 0.6480751, -18.65094)
 
+[node name="PineTree20" parent="." unique_id=1249077104 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0.6480751, -8)
+
+[node name="PineTree21" parent="." unique_id=201946797 instance=ExtResource("4_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0.6480751, -8)
+
+[node name="PineTree29" parent="." unique_id=818798626 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.176182, 0.6480751, -33.06551)
+
+[node name="PineTree30" parent="." unique_id=1477963248 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.605156, 0.6480751, -36.107132)
+
+[node name="PineTree31" parent="." unique_id=1237749743 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.65049, 0.6480751, -36.06551)
+
+[node name="PineTree32" parent="." unique_id=1230880823 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.506622, 0.6480751, -39.431904)
+
+[node name="PineTree33" parent="." unique_id=963653459 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0217476, 0.6480751, -31.250774)
+
+[node name="PineTree34" parent="." unique_id=618969909 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4998817, 0.6480751, -38.184372)
+
+[node name="PineTree35" parent="." unique_id=69724503 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.898567, 0.6480751, -43.708443)
+
+[node name="PineTree36" parent="." unique_id=1472666488 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.535256, 0.6480751, -36.583694)
+
+[node name="PineTree37" parent="." unique_id=643798655 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3700333, 0.6480751, -41.721333)
+
+[node name="PineTree38" parent="." unique_id=1313447028 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.823818, 0.6480751, -36.06551)
+
+[node name="PineTree39" parent="." unique_id=1830532592 instance=ExtResource("4_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.823818, 0.6480751, -36.06551)
+
+[node name="PineTree40" parent="." unique_id=1304914532 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.76367, 0.6480751, -19.06241)
+
+[node name="PineTree41" parent="." unique_id=1355925400 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.334694, 0.6480751, -22.104033)
+
+[node name="PineTree42" parent="." unique_id=974038610 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.28936, 0.6480751, -22.06241)
+
+[node name="PineTree43" parent="." unique_id=299739540 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.433228, 0.6480751, -25.428804)
+
+[node name="PineTree44" parent="." unique_id=2089554021 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.918106, 0.6480751, -17.247675)
+
+[node name="PineTree45" parent="." unique_id=1289731943 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.43973, 0.6480751, -24.181273)
+
+[node name="PineTree46" parent="." unique_id=1518738199 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.041283, 0.6480751, -29.705343)
+
+[node name="PineTree47" parent="." unique_id=243807635 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.404594, 0.6480751, -22.580595)
+
+[node name="PineTree48" parent="." unique_id=1272009185 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.30988, 0.6480751, -27.718233)
+
+[node name="PineTree49" parent="." unique_id=1864160586 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.76367, 0.6480751, -22.06241)
+
+[node name="PineTree50" parent="." unique_id=252173597 instance=ExtResource("4_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.76367, 0.6480751, -22.06241)
+
+[node name="Fence" parent="." unique_id=1419219794 instance=ExtResource("14_fence")]
+transform = Transform3D(0.3, 0, 0, 0, 0.263, 0, 0, 0, 0.536, -18.482124, 1.4700562, 0.13413453)
+
+[node name="Fence2" parent="." unique_id=1259503965 instance=ExtResource("14_fence")]
+transform = Transform3D(0.3, 0, 0, 0, 0.263, 0, 0, 0, 0.536, -25.90953, 1.4718624, 0.026952744)
+
+[node name="Fence3" parent="." unique_id=1765336080 instance=ExtResource("14_fence")]
+transform = Transform3D(0.3, 0, 0, 0, 0.263, 0, 0, 0, 0.536, -33.190727, 1.4718624, 0.026952744)
+
 [node name="House" parent="." unique_id=1069109850 instance=ExtResource("6_house")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.441048, 0, -1.0027828)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -9.441048, 0.26778364, -1.0027828)
+
+[node name="PineTree19" parent="." unique_id=34751832 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6588402, 0.6480751, -15.033757)
+
+[node name="PineTree22" parent="." unique_id=37503358 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.912186, 0.6480751, -18.075378)
+
+[node name="PineTree23" parent="." unique_id=1419699853 instance=ExtResource("5_pine3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.017223, 0.6480751, -20.152618)
+
+[node name="PineTree24" parent="." unique_id=857502590 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9820852, 0.6480751, -18.55194)
+
+[node name="PineTree25" parent="." unique_id=731789555 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.887375, 0.6480751, -23.689579)
+
+[node name="PineTree26" parent="." unique_id=180181481 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.410896, 0.6480751, -23.305912)
+
+[node name="PineTree27" parent="." unique_id=647685241 instance=ExtResource("2_pine")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.34116, 0.6480751, -18.033756)
+
+[node name="PineTree28" parent="." unique_id=1555646416 instance=ExtResource("4_pine2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.34116, 0.6480751, -18.033756)
 
 [node name="Well" parent="." unique_id=919868062 instance=ExtResource("7_well")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.122039, 0.667655, -3.7775364)
@@ -115,10 +220,4 @@ data = {
 }
 
 [node name="Hill" parent="." unique_id=2126380576 instance=ExtResource("9_hill")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 0, 0, -82.86667)
-
-[node name="Hills2" parent="." unique_id=1190942170 instance=ExtResource("10_hills2")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 78.655, 13.757, -80)
-
-[node name="Hills3" parent="." unique_id=556287517 instance=ExtResource("10_hills2")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, -79.863, 16.852, -80)
+transform = Transform3D(9.329507, 0, 0, 0, 6, 0, 0, 0, 6, -192.13718, -19.290157, -58.70244)

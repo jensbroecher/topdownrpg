@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cju3luw0x70ft" path="res://sprites/stone.jpeg" id="2_stone"]
 [ext_resource type="Texture2D" uid="uid://c6iag8x7rb2i7" path="res://sprites/forest_floor.jpeg" id="3_forest"]
 [ext_resource type="Texture2D" uid="uid://kbysalytp3hn" path="res://sprites/grass_stone_transition.jpeg" id="4_transition"]
-[ext_resource type="Shader" uid="uid://dtt4an1midevp" path="res://terrain.gdshader" id="5_shader"]
+[ext_resource type="Shader" uid="uid://4fs14sk4pgc0" path="res://terrain.gdshader" id="5_shader"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_hxk1b"]
 frequency = 0.05
