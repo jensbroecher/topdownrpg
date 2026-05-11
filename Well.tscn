@@ -11,13 +11,13 @@ radius = 1.0
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1598391913]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 2.0961666, -0.5)
-billboard = 1
 shaded = true
 double_sided = false
 alpha_cut = 1
 texture = ExtResource("1_tex")
 script = ExtResource("2_tilter")
-tilt_strength = 4.0
+enabled = false
+tilt_strength = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1500087259]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)

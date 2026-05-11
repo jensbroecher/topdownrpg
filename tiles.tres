@@ -1,13 +1,13 @@
 [gd_resource type="MeshLibrary" format=3 uid="uid://2yuentd6pfuf"]
 
-[ext_resource type="Texture2D" uid="uid://c57qnu5hna8y1" path="res://sprites/grass.jpeg" id="1_grass"]
+[ext_resource type="Texture2D" uid="uid://bluavs4uuoht1" path="res://sprites/grass_v2.jpeg" id="1_grass"]
 [ext_resource type="Texture2D" uid="uid://cju3luw0x70ft" path="res://sprites/stone.jpeg" id="2_stone"]
 [ext_resource type="Texture2D" uid="uid://c6iag8x7rb2i7" path="res://sprites/forest_floor.jpeg" id="3_forest"]
 [ext_resource type="Texture2D" uid="uid://kbysalytp3hn" path="res://sprites/grass_stone_transition.jpeg" id="4_transition"]
-[ext_resource type="Shader" uid="uid://4fs14sk4pgc0" path="res://terrain.gdshader" id="5_shader"]
+[ext_resource type="Shader" uid="uid://dtt4an1midevp" path="res://terrain.gdshader" id="5_shader"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_hxk1b"]
-frequency = 0.05
+frequency = 0.02
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p3o2v"]
 noise = SubResource("FastNoiseLite_hxk1b")
@@ -22,10 +22,17 @@ shader_parameter/edge_distance = 0.9
 shader_parameter/noise_scale = 0.1
 shader_parameter/noise_strength = 0.2
 shader_parameter/material_priority = 0.0
+shader_parameter/green_boost = 1.2
+shader_parameter/height_scale = 0.05
+shader_parameter/variation_scale = 0.05
+shader_parameter/variation_strength = 0.4
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_grass"]
 material = SubResource("ShaderMaterial_grass")
 size = Vector2(5, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tile"]
+size = Vector3(4, 0.1, 4)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_stone"]
 render_priority = 0
@@ -36,6 +43,10 @@ shader_parameter/edge_distance = 0.9
 shader_parameter/noise_scale = 0.1
 shader_parameter/noise_strength = 0.2
 shader_parameter/material_priority = 2.0
+shader_parameter/green_boost = 1.2
+shader_parameter/height_scale = 0.05
+shader_parameter/variation_scale = 0.05
+shader_parameter/variation_strength = 0.4
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_stone"]
 material = SubResource("ShaderMaterial_stone")
@@ -50,6 +61,10 @@ shader_parameter/edge_distance = 0.9
 shader_parameter/noise_scale = 0.1
 shader_parameter/noise_strength = 0.2
 shader_parameter/material_priority = 1.0
+shader_parameter/green_boost = 1.2
+shader_parameter/height_scale = 0.05
+shader_parameter/variation_scale = 0.05
+shader_parameter/variation_strength = 0.4
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_forest"]
 material = SubResource("ShaderMaterial_forest")
@@ -64,6 +79,10 @@ shader_parameter/edge_distance = 0.9
 shader_parameter/noise_scale = 0.1
 shader_parameter/noise_strength = 0.2
 shader_parameter/material_priority = 3.0
+shader_parameter/green_boost = 1.2
+shader_parameter/height_scale = 0.05
+shader_parameter/variation_scale = 0.05
+shader_parameter/variation_strength = 0.4
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_transition"]
 material = SubResource("ShaderMaterial_transition")
@@ -74,14 +93,14 @@ item/0/name = "Grass"
 item/0/mesh = SubResource("PlaneMesh_grass")
 item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/mesh_cast_shadow = 1
-item/0/shapes = []
+item/0/shapes = [SubResource("BoxShape3D_tile"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)]
 item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/navigation_layers = 1
 item/1/name = "Stone"
 item/1/mesh = SubResource("PlaneMesh_stone")
 item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/1/mesh_cast_shadow = 1
-item/1/shapes = []
+item/1/shapes = [SubResource("BoxShape3D_tile"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)]
 item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/1/navigation_layers = 1
 item/2/name = "Forest Floor"

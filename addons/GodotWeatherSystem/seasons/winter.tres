@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="SeasonResource" format=3 uid="uid://d2qid4rjqnonm"]
 
-[ext_resource type="Script" uid="uid://be1ldgggjvmql" path="res://addons/GodotWeatherSystem/scripts/SeasonResource.gd" id="1_pic1x"]
-[ext_resource type="Script" uid="uid://clv2jxf7x1lao" path="res://addons/GodotWeatherSystem/scripts/SkyColourResource.gd" id="2_s06qr"]
-[ext_resource type="Script" uid="uid://c25is66f7tycx" path="res://addons/GodotWeatherSystem/scripts/WeatherOccurrenceResource.gd" id="3_au8qq"]
+[ext_resource type="Script" uid="uid://cpx88edmwbon1" path="res://addons/GodotWeatherSystem/scripts/SeasonResource.gd" id="1_pic1x"]
+[ext_resource type="Script" uid="uid://ct8ssg1fuina4" path="res://addons/GodotWeatherSystem/scripts/SkyColourResource.gd" id="2_s06qr"]
+[ext_resource type="Script" uid="uid://c0bu4su5psbae" path="res://addons/GodotWeatherSystem/scripts/WeatherOccurrenceResource.gd" id="3_au8qq"]
 [ext_resource type="Resource" uid="uid://ds2x8q6qhj8b0" path="res://addons/GodotWeatherSystem/weather/fine.tres" id="4_rnkxv"]
 [ext_resource type="Resource" uid="uid://bbtqdfvkjixub" path="res://addons/GodotWeatherSystem/weather/clouded.tres" id="5_nq3hu"]
 [ext_resource type="Resource" uid="uid://cbxe14bclsqib" path="res://addons/GodotWeatherSystem/weather/snow.tres" id="6_rvu7l"]

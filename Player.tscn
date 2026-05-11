@@ -1,19 +1,47 @@
 [gd_scene format=3 uid="uid://c7t8t7x5b1p4k"]
 
 [ext_resource type="Script" uid="uid://c6x406v5cang5" path="res://Player.gd" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://bpsh6dilfx0py" path="res://elf running.fbx" id="2_elf"]
+[ext_resource type="PackedScene" path="res://VideoSprite.tscn" id="2_video_sprite"]
+[ext_resource type="Script" path="res://SequenceSprite.gd" id="3_sequence_sprite"]
+[ext_resource type="Shader" path="res://chroma_key.gdshader" id="4_shader"]
+[ext_resource type="AudioStream" uid="uid://walking_audio_123" path="res://sound/walking fast.wav" id="5_walking_audio"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sequence"]
+shader = ExtResource("4_shader")
+shader_parameter/key_color = Color(1, 1, 1, 1)
+shader_parameter/similarity = 0.15
+shader_parameter/smoothness = 0.08
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.8
+height = 3.4
 
 [node name="Player" type="CharacterBody3D" unique_id=487565928]
 script = ExtResource("1_script")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=587660531]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 shape = SubResource("CapsuleShape3D_player")
 
-[node name="Elf" parent="." unique_id=156413552 instance=ExtResource("2_elf")]
-transform = Transform3D(2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, 0, 0, 0)
+[node name="VideoSprite" parent="." unique_id=156413552 instance=ExtResource("2_video_sprite")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+visible = false
+
+[node name="SequenceSprite" type="Sprite3D" parent="." unique_id=156413553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+material_override = SubResource("ShaderMaterial_sequence")
+cast_shadow = 0
+offset = Vector2(0, 0)
+pixel_size = 0.004
+billboard = 2
+double_sided = false
+script = ExtResource("3_sequence_sprite")
+fps = 60.0
+playing = true
+
+[node name="WalkingAudio" type="AudioStreamPlayer3D" parent="." unique_id=1362321814]
+stream = ExtResource("5_walking_audio")
+max_distance = 20.0
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1362321813]
 

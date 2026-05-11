@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c5f6t7y8vai0o"]
+
+[ext_resource type="Texture2D" uid="uid://d2k5l6m7n8o9p" path="res://sprites/castle-tower.png" id="1_tex"]
+[ext_resource type="Script" uid="uid://c0dlsf3y8xhwq" path="res://DynamicSprite.gd" id="2_tilter"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tower"]
+height = 12.0
+radius = 3.0
+
+[node name="CastleTower" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, -1)
+shaded = true
+alpha_cut = 1
+texture = ExtResource("1_tex")
+script = ExtResource("2_tilter")
+enabled = false
+tilt_strength = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+shape = SubResource("CylinderShape3D_tower")

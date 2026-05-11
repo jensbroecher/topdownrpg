@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://VideoSprite.gd" id="1_script"]
+[ext_resource type="Shader" path="res://chroma_key.gdshader" id="2_shader"]
+[ext_resource type="VideoStream" path="res://video-sprites/walking-fast.ogv" id="3_video"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_key"]
+shader = ExtResource("2_shader")
+shader_parameter/key_color = Color(1, 1, 1, 1)
+shader_parameter/similarity = 0.35
+shader_parameter/smoothness = 0.08
+
+[node name="VideoSprite" type="Node3D"]
+script = ExtResource("1_script")
+video_stream = ExtResource("3_video")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_video")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+material_override = SubResource("ShaderMaterial_key")
+cast_shadow = 0
+centered = true
+offset = Vector2(0, 512)
+pixel_size = 0.004
+billboard = 2
+transparent = true
+double_sided = false
